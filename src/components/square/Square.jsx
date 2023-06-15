@@ -1,13 +1,19 @@
 import React from 'react';
-import { Circle, Xmark } from '../../components'
-import { EMPTY, CIRCLED, CROSSED, PLAYER1, PLAYER2 } from '../../globals';
+import { Circle, Cross } from '../../components'
+import { EMPTY, O, X } from '../../globals';
 import './square.css';
 
-const Square = ({ position, value }) => {
+const Square = ({ position, value, takeTurn }) => {
+  function handleClick() {
+    if (value === EMPTY) {
+      takeTurn(position)
+    }
+  }
+
   return (
-    <div className="square">
-        {value == CIRCLED && <Circle />}
-        {value == CROSSED && <Xmark />}
+    <div className="square" onClick={handleClick}>
+        {value == O && <Circle />}
+        {value == X && <Cross />}
     </div>
   )
 }

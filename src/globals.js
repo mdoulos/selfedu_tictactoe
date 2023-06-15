@@ -1,6 +1,3 @@
 export const EMPTY = 'EMPTY';
-export const CIRCLED = 'CIRCLED';
-export const CROSSED = 'CROSSED';
-
-export const PLAYER1 = 'O';
-export const PLAYER2 = 'X';
+export const O = 'O';
+export const X = 'X';

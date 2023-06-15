@@ -5,9 +5,9 @@ import './result.css';
 const Result = ({ winner, reset }) => {
   return (
     <div className="result">
-        {winner == O && <h1>Player O wins!</h1>}
-        {winner == X && <h1>Player X wins!</h1>}
-        {winner == 'It is a tie' && <h1>It's a tie!</h1>}
+        {winner == O && <span>Player O wins!</span>}
+        {winner == X && <span>Player X wins!</span>}
+        {winner == 'It is a tie' && <span>It's a tie!</span>}
         <button onClick={reset}>Reset</button>
     </div>
   )

@@ -1,3 +1,14 @@
+.tictactoe-wrapper {
+    margin: 0.5rem;
+    padding: 8rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    background-color: white;
+}
+
 .grid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -6,3 +17,12 @@
     row-gap: 10px;
     background-color: lightgray;
 }
+
+@media screen and (max-width: 500px) {
+
+    .tictactoe-wrapper {
+        border: solid 2px black;
+    }
+
+}
+

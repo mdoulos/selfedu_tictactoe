@@ -41,7 +41,7 @@ const TicTacToe = () => {
 
 
   return (
-    <div>
+    <div className="tictactoe-wrapper">
       <div className="tictactoe grid">
           <Square position={0} value={state.positions[0]} takeTurn={takeTurn} />
           <Square position={1} value={state.positions[1]} takeTurn={takeTurn} />

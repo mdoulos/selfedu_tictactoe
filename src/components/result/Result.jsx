@@ -1,6 +1,5 @@
 import React from 'react';
 import { O, X } from '../../globals';
-import { Confetti } from '../../components';
 import './result.css';
 import SOUND1 from '../../assets/sound-victory.mp3';
 import SOUND2 from '../../assets/sound-defeat.mp3';
@@ -29,10 +28,6 @@ const Result = ({ winner, reset, soundControl, opponentType }) => {
         {winner == O && opponentType == "robot" && <span>The Computer wins!</span>}
         {winner == 'It is a tie' && <span>It's a tie!</span>}
         <button onClick={reset}>Reset</button>
-
-
-        {(winner == X || winner == O) && opponentType == "human" && <Confetti />}
-        {winner == X && opponentType == "robot" && <Confetti />}
     </div>
   )
 }

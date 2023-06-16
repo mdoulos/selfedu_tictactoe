@@ -64,8 +64,39 @@
         justify-content: space-around;
     }
 
+    .icon-button {
+        width: 49%;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-button {
+        width: 49%;
+        margin-bottom: 0.5rem;
+    }
+
     .app-footer button {
-        width: 45%;
         font-size: 1rem;
+    }
+
+    .app-footer {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .app-footer {
+        padding: 0 0.5rem;
+    }
+    .icon-button {
+        width: 48%;
+    }
+
+    .text-button {
+        width: 98%;
+    }
+
+    .app-footer button {
+        font-size: 1.5rem;
     }
 }

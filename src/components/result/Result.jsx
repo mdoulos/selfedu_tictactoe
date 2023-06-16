@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { O, X } from '../../globals';
 import './result.css';
 import SOUND1 from '../../assets/sound-victory.mp3';
 import SOUND2 from '../../assets/sound-defeat.mp3';
 import SOUND3 from '../../assets/sound-tie.mp3';
 
-const Result = ({ winner, reset, soundControl, opponentType }) => {
+const Result = ({ winner, reset, soundControl, opponentType, setStreak }) => {
   const audio1 = new Audio(SOUND1);
   const audio2 = new Audio(SOUND2);
   const audio3 = new Audio(SOUND3);
@@ -19,6 +19,14 @@ const Result = ({ winner, reset, soundControl, opponentType }) => {
       audio3.play();
     }
   }
+
+  useEffect(() => {
+    if (winner == O && opponentType == "robot") {
+        setStreak(0);
+    } else if (winner == X && opponentType == "robot") {
+        setStreak(prevStreak => prevStreak + 1);
+    }
+  }, [winner, opponentType, setStreak]);
 
   return (
     <div className="result">

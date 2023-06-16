@@ -20,7 +20,7 @@ const initialState = {
 }
 
 
-const TicTacToe = ({opponentType, soundControl}) => {
+const TicTacToe = ({opponentType, soundControl, setStreak}) => {
   const [state, setState] = React.useState(initialState)
   const winner = detectWinner(state.positions)
 
@@ -78,7 +78,7 @@ const TicTacToe = ({opponentType, soundControl}) => {
           <Square position={7} value={state.positions[7]} takeTurn={takeTurn} />
           <Square position={8} value={state.positions[8]} takeTurn={takeTurn} />
       </div>
-      {winner && <Result winner={ winner } reset={ reset } soundControl={soundControl} opponentType={opponentType} />}
+      {winner && <Result winner={ winner } reset={ reset } soundControl={soundControl} opponentType={opponentType} setStreak={setStreak} />}
     </div>
   )
 }

@@ -3,6 +3,8 @@
     width: 100vw;
     max-width: 800px;
     justify-content: space-between;
+    margin-top: 1rem;
+    position: relative;
 }
 
 .app-header h1 {
@@ -14,6 +16,34 @@
     color: white;
     position: relative;
     top: 30px;
+}
+
+.streak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f57b009a;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+    position: absolute;
+    top: 75px;
+    right: 0;
+}
+
+.streak img {
+    width: 25px;
+    height: 25px;
+}
+
+.streak span {
+    color: white;
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+.hidden {
+    display: none;
 }
 
 
@@ -30,6 +60,11 @@
     .app-header p {
         top: 0;
         margin-bottom: 1rem;
+    }
+
+    .streak {
+        top: 18px;
+        right: 0;
     }
 
 }

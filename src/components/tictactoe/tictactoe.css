@@ -18,10 +18,19 @@
     background-color: lightgray;
 }
 
+@media screen and (max-width: 768px) {
+
+    .tictactoe-wrapper {
+        padding: 4rem;
+    }
+
+}
+
 @media screen and (max-width: 500px) {
 
     .tictactoe-wrapper {
         border: solid 2px black;
+        padding: 2rem;
     }
 
 }

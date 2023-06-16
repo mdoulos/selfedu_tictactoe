@@ -21,7 +21,7 @@ export function detectWinner(p) {
         }
     });
 
-    if (winner == "X") return "X";
-    if (winner == "O") return "O";
-    if(p.every(position => position != EMPTY)) return "It is a tie";
+    if (winner === "X") return "X";
+    if (winner === "O") return "O";
+    if (p.every(position => position !== EMPTY)) return "It is a tie";
 }

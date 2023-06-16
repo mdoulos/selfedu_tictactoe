@@ -1,0 +1,35 @@
+.app-header {
+    display: flex;
+    width: 100vw;
+    max-width: 800px;
+    justify-content: space-between;
+}
+
+.app-header h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.app-header p {
+    color: white;
+    position: relative;
+    top: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .app-header {
+        width: 95vw;
+        flex-direction: column;
+    }
+
+    .app-header h1 {
+        font-size: 2.5rem
+    }
+
+    .app-header p {
+        top: 0;
+        margin-bottom: 1rem;
+    }
+
+}
